@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F1097D092B7D2D6A008F9E1E /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1097D082B7D2D69008F9E1E /* View.xib */; };
-		F1097D0A2B7D2D6A008F9E1E /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1097D082B7D2D69008F9E1E /* View.xib */; };
 		F1097D0C2B7D2DF0008F9E1E /* ClubsAndEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1097D0B2B7D2DF0008F9E1E /* ClubsAndEvents.swift */; };
 		F1097D0D2B7D2DF0008F9E1E /* ClubsAndEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1097D0B2B7D2DF0008F9E1E /* ClubsAndEvents.swift */; };
 		F1097D122B813B9C008F9E1E /* ShapeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1097D112B813B9C008F9E1E /* ShapeViews.swift */; };
@@ -21,10 +19,15 @@
 		F13E630F2B7A8ED100BB98F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E62FD2B7A8ECC00BB98F4 /* ContentView.swift */; };
 		F13E63102B7A8ED100BB98F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13E62FE2B7A8ED000BB98F4 /* Assets.xcassets */; };
 		F13E63112B7A8ED100BB98F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13E62FE2B7A8ED000BB98F4 /* Assets.xcassets */; };
+		F1AA340D2B92807200066B7F /* StudentOrgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA340C2B92806E00066B7F /* StudentOrgs.swift */; };
+		F1AA340E2B92807400066B7F /* StudentOrgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA340C2B92806E00066B7F /* StudentOrgs.swift */; };
+		F1B910F32B8596AB0041F1F0 /* SubmitForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B910F22B8596AB0041F1F0 /* SubmitForm.swift */; };
+		F1B910F42B8596AB0041F1F0 /* SubmitForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B910F22B8596AB0041F1F0 /* SubmitForm.swift */; };
+		F1B911022B8696FD0041F1F0 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B911012B8696FB0041F1F0 /* Events.swift */; };
+		F1B911032B8696FD0041F1F0 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B911012B8696FB0041F1F0 /* Events.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F1097D082B7D2D69008F9E1E /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		F1097D0B2B7D2DF0008F9E1E /* ClubsAndEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsAndEvents.swift; sourceTree = "<group>"; };
 		F1097D112B813B9C008F9E1E /* ShapeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViews.swift; sourceTree = "<group>"; };
 		F1097D142B823F55008F9E1E /* StudentOrgPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentOrgPage.swift; sourceTree = "<group>"; };
@@ -34,6 +37,9 @@
 		F13E63032B7A8ED100BB98F4 /* DrakeOrgs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrakeOrgs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F13E63092B7A8ED100BB98F4 /* DrakeOrgs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrakeOrgs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F13E630B2B7A8ED100BB98F4 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		F1AA340C2B92806E00066B7F /* StudentOrgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentOrgs.swift; sourceTree = "<group>"; };
+		F1B910F22B8596AB0041F1F0 /* SubmitForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitForm.swift; sourceTree = "<group>"; };
+		F1B911012B8696FB0041F1F0 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,11 +74,13 @@
 			children = (
 				F13E62FC2B7A8ECC00BB98F4 /* DrakeOrgsApp.swift */,
 				F13E62FD2B7A8ECC00BB98F4 /* ContentView.swift */,
+				F1AA340C2B92806E00066B7F /* StudentOrgs.swift */,
 				F1097D0B2B7D2DF0008F9E1E /* ClubsAndEvents.swift */,
 				F1097D142B823F55008F9E1E /* StudentOrgPage.swift */,
-				F1097D082B7D2D69008F9E1E /* View.xib */,
 				F13E62FE2B7A8ED000BB98F4 /* Assets.xcassets */,
 				F1097D112B813B9C008F9E1E /* ShapeViews.swift */,
+				F1B910F22B8596AB0041F1F0 /* SubmitForm.swift */,
+				F1B911012B8696FB0041F1F0 /* Events.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -173,7 +181,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1097D092B7D2D6A008F9E1E /* View.xib in Resources */,
 				F13E63102B7A8ED100BB98F4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,7 +189,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1097D0A2B7D2D6A008F9E1E /* View.xib in Resources */,
 				F13E63112B7A8ED100BB98F4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -198,7 +204,10 @@
 				F1097D0C2B7D2DF0008F9E1E /* ClubsAndEvents.swift in Sources */,
 				F13E630E2B7A8ED100BB98F4 /* ContentView.swift in Sources */,
 				F1097D122B813B9C008F9E1E /* ShapeViews.swift in Sources */,
+				F1B911022B8696FD0041F1F0 /* Events.swift in Sources */,
 				F13E630C2B7A8ED100BB98F4 /* DrakeOrgsApp.swift in Sources */,
+				F1AA340D2B92807200066B7F /* StudentOrgs.swift in Sources */,
+				F1B910F32B8596AB0041F1F0 /* SubmitForm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +219,10 @@
 				F1097D0D2B7D2DF0008F9E1E /* ClubsAndEvents.swift in Sources */,
 				F13E630F2B7A8ED100BB98F4 /* ContentView.swift in Sources */,
 				F1097D132B813B9C008F9E1E /* ShapeViews.swift in Sources */,
+				F1B911032B8696FD0041F1F0 /* Events.swift in Sources */,
 				F13E630D2B7A8ED100BB98F4 /* DrakeOrgsApp.swift in Sources */,
+				F1AA340E2B92807400066B7F /* StudentOrgs.swift in Sources */,
+				F1B910F42B8596AB0041F1F0 /* SubmitForm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,7 @@ struct CircleView: View {
         }){
         ZStack {
             Ellipse()
-                .fill(.black)
+                .fill(Color(UIColor(hex: "#004477")!))
                 .frame(width: 100, height: 80)
             Text(label).foregroundColor(.white)
         }
@@ -35,7 +35,7 @@ struct RectangleView: View {
         }){
         ZStack {
             Rectangle()
-                .fill(Color.black)
+                .fill(Color(UIColor(hex: "#004477")!))
                 .frame(width: 300.0, height: 80.0)
             Text(label).foregroundColor(.white)
         }
@@ -45,4 +45,24 @@ struct RectangleView: View {
             DisplayTextView(text: self.label)
         }
 }
+}
+
+extension UIColor {
+    convenience init?(hex: String) {
+        var hexSanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
+        hexSanitized = hexSanitized.replacingOccurrences(of: "#", with: "")
+
+        var rgb: UInt64 = 0
+
+        guard Scanner(string: hexSanitized).scanHexInt64(&rgb) else {
+            return nil
+        }
+
+        self.init(
+            red: CGFloat((rgb & 0xFF0000) >> 16) / 255.0,
+            green: CGFloat((rgb & 0x00FF00) >> 8) / 255.0,
+            blue: CGFloat(rgb & 0x0000FF) / 255.0,
+            alpha: CGFloat(1.0)
+        )
+    }
 }

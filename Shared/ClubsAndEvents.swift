@@ -13,23 +13,41 @@ struct ClubsView: View {
         VStack {
             //title of the page
             Text("DrakeOrgs")
-                .position(x: 200, y:15)
                 .font(
                         .system(size: 34)
                         .weight(.heavy)
-                )
+                ).foregroundColor(Color(UIColor(hex: "#004477")!))
+            
+            let events: [Event] = [
+                    Event(title: "Nelson Student Research Symposium", date: "March 8 From 12:30-4:30PM", location: "Collier Scripps 3rd Floor"),
+                    Event(title: "Annual Juried Student Exhibition", date: "March 24 from 1-3PM", location: "Anderson Gallery"),
+                    Event(title: "Global Citizenship Showcase", date: "March 7 from 8:30-10:00 AM", location: "Cowles Library Reading Room"),
+                    Event(title: "Citizen Diplomacy Documentary Screening", date: "March 7 from 6:30-8:30 PM", location: "Harkin Institute"),
+                    Event(title: "Post-Graduate Global Scholarship Info Session", date: "March 7 from 4:30-5:00 PM", location: "Upper Olmsted, CR 310"),
+                    Event(title: "Justice Program DSM", date: "March 15-17", location: "TBD"),
+                    // Add more events as needed
+                ]
+            
+                
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 20) {
+                    ForEach(events) { event in
+                        UpcomingEvents(event: event)
+                        }
+                    }
+                    .padding()
+                }
+                
 
         //vertical stack of rectangle buttons for club list
         VStack{
             Divider()
             ScrollView() {
                 VStack(spacing: 10) {
-                    ForEach(0..<10) { index in
+                    ForEach(0..<130) { index in
                         
                         //navigate to new page with information about club
-                        NavigationLink(destination: DisplayTextView(text: studentOrgs[index])) {
-                            Text("")}
-                        
                         RectangleView(label:studentOrgs[index])
                     }
                 }.padding()
@@ -38,28 +56,13 @@ struct ClubsView: View {
             Spacer()
         }
 
-        //bottom tab bar
-        TabView {
-            Text("")
-                .tabItem {
-                Image(systemName: "doc.text.magnifyingglass")
-                Text("Explore")
-                  }
-            Text("")
-                .tabItem {
-                Image(systemName: "calendar")
-                Text("Clubs and Events")
-                  }
-            Text("")
-                .tabItem {
-                Image(systemName: "square.and.pencil")
-                Text("Submit Information")
-                  }
-            }
             
         }
     }
+    
+struct ClubsandEventsView_Previews: PreviewProvider {
+        static var previews: some View {
+            ClubsView()
+        }
+    }
 }
-
-
-
