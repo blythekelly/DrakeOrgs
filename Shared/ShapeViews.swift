@@ -42,7 +42,7 @@ struct RectangleView: View {
         }
         //once button is pressed, send label data to club page
         .sheet(isPresented: $isButtonPressed) {
-            DisplayTextView(text: self.label)
+            DisplayTextView(orgName: self.label)
         }
 }
 }

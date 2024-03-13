@@ -1,20 +1,11 @@
-//
-//  StudentOrgPage.swift
-//  DrakeOrgs
-//
-//  Created by Blythe Kelly on 2/18/24.
-//
-
 import SwiftUI
 import Foundation
 
-
-// View for the org page that displays the text from the button
 struct DisplayTextView: View {
-    var text: String
-    @Environment(\.presentationMode) var presentationMode
+    @State private var orgDescription: String = ""
     
-    var upcomingEvents = ["Past Event", "Past Event", "Past Event", "Past Event"] // Sample upcoming events
+    let orgName: String
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack(spacing: 20) {
@@ -33,7 +24,7 @@ struct DisplayTextView: View {
             }
             
             // Title
-            Text(text)
+            Text(orgName)
                 .font(.title)
                 .fontWeight(.bold)
             
@@ -45,7 +36,7 @@ struct DisplayTextView: View {
                     .font(.headline)
                     .fontWeight(.bold)
                 
-                Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor, nisi et consequat fermentum, nunc nunc placerat risus, et facilisis neque nisi a leo.")
+                Text(orgDescription)
                     .padding()
                     .font(.body)
             }
@@ -73,7 +64,7 @@ struct DisplayTextView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 15) {
-                        ForEach(upcomingEvents, id: \.self) { event in
+                        ForEach(["Past Event", "Past Event", "Past Event", "Past Event"], id: \.self) { event in
                             EventCard(title: event)
                         }
                     }
@@ -84,6 +75,67 @@ struct DisplayTextView: View {
             Spacer()
         }
         .padding(.horizontal)
+        .onAppear {
+            fetchOrganizationData(orgName: orgName) { result in
+                switch result {
+                case .success(let data):
+                    do {
+                        if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
+                           let description = json["description"] as? String {
+                            self.orgDescription = description
+                        } else {
+                            print("Invalid JSON format or missing 'description' field")
+                        }
+                    } catch {
+                        print("Error parsing JSON:", error)
+                    }
+                case .failure(let error):
+                    print("Error fetching organization data:", error)
+                }
+            }
+        }
+    }
+    
+    // Function to fetch organization data
+    func fetchOrganizationData(orgName: String, completion: @escaping (Result<Data, Error>) -> Void) {
+        // Construct the URL
+        let orgNameEncoded = orgName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+        let urlString = "https://d4kfv1hyq7.execute-api.us-east-1.amazonaws.com/DrakeOrgs-API/get?org-name=\(orgNameEncoded)"
+        guard let url = URL(string: urlString) else {
+            let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"])
+            completion(.failure(error))
+            return
+        }
+        
+        // Create the URLSession
+        let session = URLSession.shared
+        
+        // Create the data task
+        let task = session.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                completion(.failure(error))
+                return
+            }
+            
+            guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+                _ = (response as? HTTPURLResponse)?.statusCode ?? -1
+                let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid HTTP response status code: \((response as? HTTPURLResponse)?.statusCode ?? -1)"])
+                completion(.failure(error))
+                return
+            }
+            
+            guard let data = data else {
+                let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "No data received"])
+                completion(.failure(error))
+                return
+            }
+            
+            // Call completion handler with the received data
+            completion(.success(data))
+        }
+        
+        // Start the task
+        task.resume()
     }
 }
 
@@ -106,7 +158,6 @@ struct EventCard: View {
 
 struct DisplayTextView_Previews: PreviewProvider {
     static var previews: some View {
-        DisplayTextView(text: "Women in STEM")
+        DisplayTextView(orgName: "Women in STEM")
     }
 }
-
