@@ -3,9 +3,10 @@ import Foundation
 
 struct DisplayTextView: View {
     @State private var orgDescription: String = ""
+    @State private var contactInfo: String = ""
+    @Environment(\.presentationMode) var presentationMode
     
     let orgName: String
-    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack(spacing: 20) {
@@ -49,7 +50,7 @@ struct DisplayTextView: View {
                     .font(.headline)
                     .fontWeight(.bold)
                 
-                Text("contact@example.com")
+                Text(contactInfo)
                     .font(.body)
             }
             .padding(.horizontal)
@@ -80,11 +81,20 @@ struct DisplayTextView: View {
                 switch result {
                 case .success(let data):
                     do {
-                        if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                           let description = json["description"] as? String {
-                            self.orgDescription = description
+                        if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                            if let description = json["description"] as? String {
+                                self.orgDescription = description
+                            } else {
+                                print("Invalid JSON format or missing 'description' field")
+                            }
+                            
+                            if let contactInfo = json["contact-info"] as? String {
+                                self.contactInfo = contactInfo
+                            } else {
+                                print("Invalid JSON format or missing 'contact-info' field")
+                            }
                         } else {
-                            print("Invalid JSON format or missing 'description' field")
+                            print("Invalid JSON format")
                         }
                     } catch {
                         print("Error parsing JSON:", error)
