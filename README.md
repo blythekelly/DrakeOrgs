@@ -1,5 +1,6 @@
 # DrakeOrgs
-DrakeOrgs is an application designed to provide users with information about student organizations at Drake University. Whether you're a student looking to get involved or someone curious about the vibrant campus life at Drake, DrakeOrgs has you covered.
+DrakeOrgs is an application designed to create a centralized platform for students to find information about various student organizations on the Drake University campus and sign up for membership seamlessly. This app addresses the needs of both students and organizations. For students, DrakeOrgs provides detailed information about each organization, including their purpose, activities, or upcoming events. It also allows users to sign up for the organizations of their choice and be up-to-date about organization meetings, events, and updates. For student organizations, DrakeOrgs provides the ability to create and manage club profiles with current information. 
+
 
 ## Features
 **Browse Organizations:** View a comprehensive list of all registered student organizations at Drake University.
