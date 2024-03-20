@@ -46,12 +46,12 @@ struct ClubsView: View {
             ScrollView() {
                 VStack(spacing: 10) {
                     ForEach(0..<130) { index in
-                        
                         //navigate to new page with information about club
-                        RectangleView(label:studentOrgs[index])
+                        OrganizationButtonView(orgName: studentOrgs[index])
                     }
                 }.padding()
             }.frame(height: 500)
+                .background(Color(UIColor(hex: "#EAEAEA")!))
             Divider()
             Spacer()
         }
