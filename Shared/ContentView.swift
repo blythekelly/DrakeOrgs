@@ -5,6 +5,13 @@
 //  Created by Blythe Kelly on 2/12/24.
 //
 
+//
+//  ContentView.swift
+//  Shared
+//
+//  Created by Blythe Kelly on 2/12/24.
+//
+
 import SwiftUI
 
 
@@ -70,7 +77,7 @@ struct ContentView: View {
             }
         }
             
-        NavigationLink(destination:ClubsView()){
+        NavigationLink(destination:ClubsView(events: [])){
             VStack{
             Image(systemName: "calendar").font(.system(size: 20))
             Text("Org List").font(
