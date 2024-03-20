@@ -24,7 +24,7 @@ struct ContentView: View {
                             .fontWeight(.bold)
                             .foregroundColor(Color(UIColor(hex: "#004477")!))
                         
-                        Text("What is your interest?")
+                        Text("Filter by interest:")
                             .font(.title3)
                             .foregroundColor(Color(UIColor(hex: "#004477")!))
             
@@ -47,13 +47,14 @@ struct ContentView: View {
             ScrollView() {
                 VStack(spacing: 2) {
                     ForEach(0..<10) { index in
-                        RectangleView(label:studentOrgs[index])
+                        OrganizationButtonView(orgName: studentOrgs[index])
                     }
                 }.padding()
             }.frame(height: 480)
             Divider()
             Spacer()
         }.navigationBarHidden(true)
+                .background(Color(UIColor(hex: "#EAEAEA")!))
             
     
     
@@ -92,9 +93,6 @@ struct ContentView: View {
 }
 }
     
-
-    
-
 
 
 
