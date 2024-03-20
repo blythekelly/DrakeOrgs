@@ -66,3 +66,69 @@ extension UIColor {
         )
     }
 }
+
+struct OrganizationButtonView: View {
+    let orgName: String
+    @State private var interest: String = ""
+    @State private var isButtonPressed: Bool = false
+    
+    var body: some View {
+        Button(action: {
+            self.isButtonPressed = true
+        }) {
+            VStack {
+                Text(orgName)
+                    .font(.system(size: 24, weight: .bold))
+                    .font(.headline)
+                    .foregroundColor(.black)
+                Text(interests.isEmpty ? "Loading..." :interest)
+                    .font(.subheadline)
+                    .foregroundColor(.white)
+                    .padding(.vertical, 5)
+                    .padding(.horizontal, 10)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .foregroundColor(Color(UIColor(hex: "#004477")!))
+                    )
+            }
+        }
+        .onAppear {
+                    fetchOrganizationData(orgName: orgName) { result in
+                        switch result {
+                        case .success(let data):
+                            do {
+                                guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+                                    print("Invalid JSON format")
+                                    return
+                                }
+                                
+                                guard let interest = json["interest"] as? String else {
+                                    print("Missing 'interest' field")
+                                    return
+                                }
+                                DispatchQueue.main.async {
+                                    self.interest = interest // Update the interest property on the main thread
+                                }
+                            } catch {
+                                print("Error parsing JSON:", error)
+                            }
+                        case .failure(let error):
+                            print("Error fetching organization data:", error)
+                        }
+                    }
+                }
+        .frame(maxWidth: .infinity)
+        .frame(height: 130)
+        .background(Color.white)
+                .cornerRadius(10)
+                //once button is pressed, send label data to club page
+                .sheet(isPresented: $isButtonPressed) {
+                    DisplayTextView(orgName: self.orgName)
+                }
+    }
+}
+
+    
+
+
+
