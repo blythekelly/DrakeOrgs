@@ -32,7 +32,7 @@ struct DisplayTextView: View {
             Divider()
             
             // Organization description
-            VStack(alignment: .leading, spacing: 10) {
+            VStack {
                 Text("Description:")
                     .font(.headline)
                     .fontWeight(.bold)
@@ -45,7 +45,7 @@ struct DisplayTextView: View {
             Divider()
             
             // Contact information
-            VStack(alignment: .leading, spacing: 10) {
+            VStack{
                 Text("Contact:")
                     .font(.headline)
                     .fontWeight(.bold)
@@ -57,7 +57,7 @@ struct DisplayTextView: View {
             Divider()
             
             // Upcoming events
-            VStack(alignment: .leading) {
+            VStack{
                 Text("Upcoming Events")
                     .font(.headline)
                     .fontWeight(.bold)
@@ -93,6 +93,7 @@ struct DisplayTextView: View {
                             } else {
                                 print("Invalid JSON format or missing 'contact-info' field")
                             }
+                            
                         } else {
                             print("Invalid JSON format")
                         }
