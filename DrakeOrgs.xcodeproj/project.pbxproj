@@ -13,6 +13,15 @@
 		F1097D132B813B9C008F9E1E /* ShapeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1097D112B813B9C008F9E1E /* ShapeViews.swift */; };
 		F1097D152B823F55008F9E1E /* StudentOrgPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1097D142B823F55008F9E1E /* StudentOrgPage.swift */; };
 		F1097D162B823F55008F9E1E /* StudentOrgPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1097D142B823F55008F9E1E /* StudentOrgPage.swift */; };
+		F11F85802BA8E44D00192421 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F857F2BA8E44D00192421 /* SearchBar.swift */; };
+		F11F85812BA8E44D00192421 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F857F2BA8E44D00192421 /* SearchBar.swift */; };
+		F11F85862BA8E58700192421 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F85852BA8E58700192421 /* LogIn.swift */; };
+		F11F85872BA8E58700192421 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F85852BA8E58700192421 /* LogIn.swift */; };
+		F11F858A2BA8E6C000192421 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F11F85892BA8E6C000192421 /* FirebaseAuth */; };
+		F11F858C2BAB307200192421 /* APIFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F858B2BAB307200192421 /* APIFetch.swift */; };
+		F11F858D2BAB307200192421 /* APIFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F858B2BAB307200192421 /* APIFetch.swift */; };
+		F11F858F2BAB342600192421 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F11F858E2BAB342600192421 /* Launch Screen.storyboard */; };
+		F11F85902BAB342600192421 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F11F858E2BAB342600192421 /* Launch Screen.storyboard */; };
 		F13E630C2B7A8ED100BB98F4 /* DrakeOrgsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E62FC2B7A8ECC00BB98F4 /* DrakeOrgsApp.swift */; };
 		F13E630D2B7A8ED100BB98F4 /* DrakeOrgsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E62FC2B7A8ECC00BB98F4 /* DrakeOrgsApp.swift */; };
 		F13E630E2B7A8ED100BB98F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E62FD2B7A8ECC00BB98F4 /* ContentView.swift */; };
@@ -31,6 +40,10 @@
 		F1097D0B2B7D2DF0008F9E1E /* ClubsAndEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubsAndEvents.swift; sourceTree = "<group>"; };
 		F1097D112B813B9C008F9E1E /* ShapeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViews.swift; sourceTree = "<group>"; };
 		F1097D142B823F55008F9E1E /* StudentOrgPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentOrgPage.swift; sourceTree = "<group>"; };
+		F11F857F2BA8E44D00192421 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		F11F85852BA8E58700192421 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
+		F11F858B2BAB307200192421 /* APIFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFetch.swift; sourceTree = "<group>"; };
+		F11F858E2BAB342600192421 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F13E62FC2B7A8ECC00BB98F4 /* DrakeOrgsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrakeOrgsApp.swift; sourceTree = "<group>"; };
 		F13E62FD2B7A8ECC00BB98F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F13E62FE2B7A8ED000BB98F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11F858A2BA8E6C000192421 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,12 +87,16 @@
 			isa = PBXGroup;
 			children = (
 				F13E62FC2B7A8ECC00BB98F4 /* DrakeOrgsApp.swift */,
+				F11F858E2BAB342600192421 /* Launch Screen.storyboard */,
 				F13E62FD2B7A8ECC00BB98F4 /* ContentView.swift */,
+				F11F85852BA8E58700192421 /* LogIn.swift */,
+				F11F857F2BA8E44D00192421 /* SearchBar.swift */,
 				F1AA340C2B92806E00066B7F /* StudentOrgs.swift */,
 				F1097D0B2B7D2DF0008F9E1E /* ClubsAndEvents.swift */,
 				F1097D142B823F55008F9E1E /* StudentOrgPage.swift */,
 				F13E62FE2B7A8ED000BB98F4 /* Assets.xcassets */,
 				F1097D112B813B9C008F9E1E /* ShapeViews.swift */,
+				F11F858B2BAB307200192421 /* APIFetch.swift */,
 				F1B910F22B8596AB0041F1F0 /* SubmitForm.swift */,
 				F1B911012B8696FB0041F1F0 /* Events.swift */,
 			);
@@ -118,6 +136,9 @@
 			dependencies = (
 			);
 			name = "DrakeOrgs (iOS)";
+			packageProductDependencies = (
+				F11F85892BA8E6C000192421 /* FirebaseAuth */,
+			);
 			productName = "DrakeOrgs (iOS)";
 			productReference = F13E63032B7A8ED100BB98F4 /* DrakeOrgs.app */;
 			productType = "com.apple.product-type.application";
@@ -166,6 +187,9 @@
 				Base,
 			);
 			mainGroup = F13E62F62B7A8ECA00BB98F4;
+			packageReferences = (
+				F11F85882BA8E6C000192421 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = F13E63042B7A8ED100BB98F4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -181,6 +205,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11F858F2BAB342600192421 /* Launch Screen.storyboard in Resources */,
 				F13E63102B7A8ED100BB98F4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11F85902BAB342600192421 /* Launch Screen.storyboard in Resources */,
 				F13E63112B7A8ED100BB98F4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,11 +226,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11F858C2BAB307200192421 /* APIFetch.swift in Sources */,
 				F1097D152B823F55008F9E1E /* StudentOrgPage.swift in Sources */,
 				F1097D0C2B7D2DF0008F9E1E /* ClubsAndEvents.swift in Sources */,
 				F13E630E2B7A8ED100BB98F4 /* ContentView.swift in Sources */,
 				F1097D122B813B9C008F9E1E /* ShapeViews.swift in Sources */,
 				F1B911022B8696FD0041F1F0 /* Events.swift in Sources */,
+				F11F85862BA8E58700192421 /* LogIn.swift in Sources */,
+				F11F85802BA8E44D00192421 /* SearchBar.swift in Sources */,
 				F13E630C2B7A8ED100BB98F4 /* DrakeOrgsApp.swift in Sources */,
 				F1AA340D2B92807200066B7F /* StudentOrgs.swift in Sources */,
 				F1B910F32B8596AB0041F1F0 /* SubmitForm.swift in Sources */,
@@ -215,11 +244,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F11F858D2BAB307200192421 /* APIFetch.swift in Sources */,
 				F1097D162B823F55008F9E1E /* StudentOrgPage.swift in Sources */,
 				F1097D0D2B7D2DF0008F9E1E /* ClubsAndEvents.swift in Sources */,
 				F13E630F2B7A8ED100BB98F4 /* ContentView.swift in Sources */,
 				F1097D132B813B9C008F9E1E /* ShapeViews.swift in Sources */,
 				F1B911032B8696FD0041F1F0 /* Events.swift in Sources */,
+				F11F85872BA8E58700192421 /* LogIn.swift in Sources */,
+				F11F85812BA8E44D00192421 /* SearchBar.swift in Sources */,
 				F13E630D2B7A8ED100BB98F4 /* DrakeOrgsApp.swift in Sources */,
 				F1AA340E2B92807400066B7F /* StudentOrgs.swift in Sources */,
 				F1B910F42B8596AB0041F1F0 /* SubmitForm.swift in Sources */,
@@ -488,6 +520,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F11F85882BA8E6C000192421 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.22.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F11F85892BA8E6C000192421 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F11F85882BA8E6C000192421 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F13E62F72B7A8ECA00BB98F4 /* Project object */;
 }

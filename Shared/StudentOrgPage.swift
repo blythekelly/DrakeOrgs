@@ -81,7 +81,21 @@ struct DisplayTextView: View {
                 switch result {
                 case .success(let data):
                     do {
-                        guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+                        if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                            if let description = json["description"] as? String {
+                                self.orgDescription = description
+                            } else {
+                                print("Invalid JSON format or missing 'description' field")
+                            }
+                            
+                            if let contactInfo = json["contact-info"] as? String {
+                                self.contactInfo = contactInfo
+                            } else {
+                                print("Invalid JSON format or missing 'contact-info' field")
+                            }
+                            
+                        } else {
+
                             print("Invalid JSON format")
                             return
                         }
