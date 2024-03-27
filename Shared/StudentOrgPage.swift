@@ -45,7 +45,7 @@ struct DisplayTextView: View {
             Divider()
             
             // Contact information
-            VStack{
+            VStack {
                 Text("Contact:")
                     .font(.headline)
                     .fontWeight(.bold)
@@ -57,7 +57,7 @@ struct DisplayTextView: View {
             Divider()
             
             // Upcoming events
-            VStack{
+            VStack {
                 Text("Upcoming Events")
                     .font(.headline)
                     .fontWeight(.bold)
@@ -95,7 +95,21 @@ struct DisplayTextView: View {
                             }
                             
                         } else {
+
                             print("Invalid JSON format")
+                            return
+                        }
+                        
+                        guard let description = json["description"] as? String else {
+                            print("Missing 'description' field")
+                            return
+                        }
+                        self.orgDescription = description
+                        
+                        if let contactInfo = json["contact-info"] as? String {
+                            self.contactInfo = contactInfo
+                        } else {
+                            print("Missing 'contact-info' field")
                         }
                     } catch {
                         print("Error parsing JSON:", error)
@@ -103,51 +117,11 @@ struct DisplayTextView: View {
                 case .failure(let error):
                     print("Error fetching organization data:", error)
                 }
+
             }
         }
     }
     
-    // Function to fetch organization data
-    func fetchOrganizationData(orgName: String, completion: @escaping (Result<Data, Error>) -> Void) {
-        // Construct the URL
-        let orgNameEncoded = orgName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-        let urlString = "https://d4kfv1hyq7.execute-api.us-east-1.amazonaws.com/DrakeOrgs-API/get?org-name=\(orgNameEncoded)"
-        guard let url = URL(string: urlString) else {
-            let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"])
-            completion(.failure(error))
-            return
-        }
-        
-        // Create the URLSession
-        let session = URLSession.shared
-        
-        // Create the data task
-        let task = session.dataTask(with: url) { (data, response, error) in
-            if let error = error {
-                completion(.failure(error))
-                return
-            }
-            
-            guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-                _ = (response as? HTTPURLResponse)?.statusCode ?? -1
-                let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid HTTP response status code: \((response as? HTTPURLResponse)?.statusCode ?? -1)"])
-                completion(.failure(error))
-                return
-            }
-            
-            guard let data = data else {
-                let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "No data received"])
-                completion(.failure(error))
-                return
-            }
-            
-            // Call completion handler with the received data
-            completion(.success(data))
-        }
-        
-        // Start the task
-        task.resume()
-    }
 }
 
 struct EventCard: View {

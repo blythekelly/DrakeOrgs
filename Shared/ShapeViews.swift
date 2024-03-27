@@ -128,4 +128,3 @@ struct OrganizationButtonView: View {
     }
 }
 
-    

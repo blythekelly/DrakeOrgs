@@ -68,8 +68,10 @@ struct ContentView: View {
             Divider()
             ScrollView() {
                 VStack(spacing: 2) {
+
                     ForEach(filteredStudentOrgs.prefix(10), id: \.self) { org in
                         OrganizationButtonView(orgName: org)
+
                     }
                 }.padding()
             }.frame(height: 420)
@@ -182,6 +184,7 @@ struct FilterButton: View {
         }
     }
 }
+
 
 
 
