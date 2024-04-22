@@ -1,12 +1,11 @@
 import SwiftUI
-import Foundation
 
 struct DisplayTextView: View {
-    @State private var orgDescription: String = ""
-    @State private var contactInfo: String = ""
+    let org: StudentOrg
+    @State private var events: [Event] = [] // State property to hold events
     @Environment(\.presentationMode) var presentationMode
     
-    let orgName: String
+    
     
     var body: some View {
         VStack(spacing: 20) {
@@ -25,7 +24,7 @@ struct DisplayTextView: View {
             }
             
             // Title
-            Text(orgName)
+            Text(org.orgName)
                 .font(.title)
                 .fontWeight(.bold)
             
@@ -37,7 +36,7 @@ struct DisplayTextView: View {
                     .font(.headline)
                     .fontWeight(.bold)
                 
-                Text(orgDescription)
+                Text(org.description)
                     .padding()
                     .font(.body)
             }
@@ -50,7 +49,7 @@ struct DisplayTextView: View {
                     .font(.headline)
                     .fontWeight(.bold)
                 
-                Text(contactInfo)
+                Text(org.contactInfo)
                     .font(.body)
             }
             .padding(.horizontal)
@@ -65,84 +64,47 @@ struct DisplayTextView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 15) {
-                        ForEach(["Past Event", "Past Event", "Past Event", "Past Event"], id: \.self) { event in
-                            EventCard(title: event)
+                        ForEach(events) { event in
+                            EventCard(event: event) // Pass the actual Event instance to EventCard
                         }
                     }
                     .padding(.horizontal)
+                }
+            }
+            .onAppear{
+                fetchEvents { fetchedEvents in
+                    if let fetchedEvents = fetchedEvents {
+                        // Update the events state property with fetched events
+                        events=fetchedEvents
+                        
+                    } else {
+                        print("Failed to fetch events data")
+                    }
+                    
                 }
             }
             
             Spacer()
         }
         .padding(.horizontal)
-        .onAppear {
-            fetchOrganizationData(orgName: orgName) { result in
-                switch result {
-                case .success(let data):
-                    do {
-                        if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                            if let description = json["description"] as? String {
-                                self.orgDescription = description
-                            } else {
-                                print("Invalid JSON format or missing 'description' field")
-                            }
-                            
-                            if let contactInfo = json["contact-info"] as? String {
-                                self.contactInfo = contactInfo
-                            } else {
-                                print("Invalid JSON format or missing 'contact-info' field")
-                            }
-                            
-                        } else {
-
-                            print("Invalid JSON format")
-                            return
-                        }
-                        
-                        guard let description = json["description"] as? String else {
-                            print("Missing 'description' field")
-                            return
-                        }
-                        self.orgDescription = description
-                        
-                        if let contactInfo = json["contact-info"] as? String {
-                            self.contactInfo = contactInfo
-                        } else {
-                            print("Missing 'contact-info' field")
-                        }
-                    } catch {
-                        print("Error parsing JSON:", error)
-                    }
-                case .failure(let error):
-                    print("Error fetching organization data:", error)
-                }
-
+        
+    }
+    
+    
+    struct EventCard: View {
+        var event: Event
+        
+        var body: some View {
+            VStack {
+                Text(event.title) // Use event properties
+                    .font(.body)
+                    .fontWeight(.medium)
+                    .padding()
+                    .frame(width: 150, height: 100)
+                    .background(Color.blue.opacity(0.1))
+                    .cornerRadius(10)
+                    .shadow(radius: 2)
             }
         }
-    }
-    
-}
-
-struct EventCard: View {
-    var title: String
-    
-    var body: some View {
-        VStack {
-            Text(title)
-                .font(.body)
-                .fontWeight(.medium)
-                .padding()
-                .frame(width: 150, height: 100)
-                .background(Color.blue.opacity(0.1))
-                .cornerRadius(10)
-                .shadow(radius: 2)
-        }
-    }
-}
-
-struct DisplayTextView_Previews: PreviewProvider {
-    static var previews: some View {
-        DisplayTextView(orgName: "Women in STEM")
     }
 }

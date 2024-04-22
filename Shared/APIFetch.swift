@@ -6,45 +6,66 @@
 //
 
 import Foundation
+import SwiftUI
 
 
-func fetchOrganizationData(orgName: String, completion: @escaping (Result<Data, Error>) -> Void) {
-    // Construct the URL
-    let orgNameEncoded = orgName.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-    let urlString = "https://d4kfv1hyq7.execute-api.us-east-1.amazonaws.com/DrakeOrgs-API/get?org-name=\(orgNameEncoded)"
-    guard let url = URL(string: urlString) else {
-        let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid URL"])
-        completion(.failure(error))
+struct StudentOrg: Identifiable, Decodable {
+    let id = UUID()
+    let orgName: String
+    let description: String
+    let contactInfo: String
+    let interest: String
+    
+    enum CodingKeys: String, CodingKey {
+        case orgName = "org-name"
+        case description = "description"
+        case contactInfo = "contact-info"
+        case interest = "interest"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        orgName = try container.decodeIfPresent(String.self, forKey: .orgName) ?? "Unknown"
+        description = try container.decodeIfPresent(String.self, forKey: .description) ?? "No description"
+        contactInfo = try container.decodeIfPresent(String.self, forKey: .contactInfo) ?? "No contact info"
+        interest = try container.decodeIfPresent(String.self, forKey: .interest) ?? "No interest"
+    }
+}
+
+
+func fetchAllOrgs(completion: @escaping ([StudentOrg]?) -> Void) {
+    let urlString = "https://d4kfv1hyq7.execute-api.us-east-1.amazonaws.com/DrakeOrgs-API/get/all"
+    guard let apiUrl = URL(string: urlString) else {
+        // Handle URL creation failure
+        print("Invalid API URL")
+        completion(nil)
         return
     }
     
-    // Create the URLSession
-    let session = URLSession.shared
-    
-    // Create the data task
-    let task = session.dataTask(with: url) { (data, response, error) in
+    URLSession.shared.dataTask(with: apiUrl) { data, response, error in
         if let error = error {
-            completion(.failure(error))
+            // Handle network or data task error
+            print("Error fetching data: \(error)")
+            completion(nil)
             return
         }
         
-        guard let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
-            _ = (response as? HTTPURLResponse)?.statusCode ?? -1
-            let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Invalid HTTP response status code: \((response as? HTTPURLResponse)?.statusCode ?? -1)"])
-            completion(.failure(error))
+        guard let responseData = data else {
+            // Handle empty response data
+            print("No data received")
+            completion(nil)
             return
         }
-        
-        guard let data = data else {
-            let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "No data received"])
-            completion(.failure(error))
-            return
+
+        do {
+            // Parse JSON data into an array of Org objects
+            let decoder = JSONDecoder()
+            let orgs = try decoder.decode([StudentOrg].self, from: responseData)
+            completion(orgs)
+        } catch {
+            // Handle JSON decoding error
+            print("Error parsing JSON: \(error)")
+            completion(nil)
         }
-        
-        // Call completion handler with the received data
-        completion(.success(data))
-    }
-    
-    // Start the task
-    task.resume()
+    }.resume()
 }
