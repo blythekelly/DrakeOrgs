@@ -4,7 +4,7 @@
 //
 //  Created by Blythe Kelly on 3/18/24.
 //
-
+/*
 import SwiftUI
 import Firebase
 
@@ -84,6 +84,7 @@ struct LoginView: View {
             }
     }
 
+    
     func createAccount() {
         if password == confirmPassword {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
@@ -104,10 +105,11 @@ struct LoginView: View {
         }
     }
 }
+     
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
     }
 }
-
+*/

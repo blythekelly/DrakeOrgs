@@ -8,32 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		F1097D0C2B7D2DF0008F9E1E /* ClubsAndEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1097D0B2B7D2DF0008F9E1E /* ClubsAndEvents.swift */; };
-		F1097D0D2B7D2DF0008F9E1E /* ClubsAndEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1097D0B2B7D2DF0008F9E1E /* ClubsAndEvents.swift */; };
 		F1097D122B813B9C008F9E1E /* ShapeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1097D112B813B9C008F9E1E /* ShapeViews.swift */; };
-		F1097D132B813B9C008F9E1E /* ShapeViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1097D112B813B9C008F9E1E /* ShapeViews.swift */; };
 		F1097D152B823F55008F9E1E /* StudentOrgPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1097D142B823F55008F9E1E /* StudentOrgPage.swift */; };
-		F1097D162B823F55008F9E1E /* StudentOrgPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1097D142B823F55008F9E1E /* StudentOrgPage.swift */; };
 		F11F85802BA8E44D00192421 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F857F2BA8E44D00192421 /* SearchBar.swift */; };
-		F11F85812BA8E44D00192421 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F857F2BA8E44D00192421 /* SearchBar.swift */; };
-		F11F85862BA8E58700192421 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F85852BA8E58700192421 /* LogIn.swift */; };
-		F11F85872BA8E58700192421 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F85852BA8E58700192421 /* LogIn.swift */; };
-		F11F858A2BA8E6C000192421 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F11F85892BA8E6C000192421 /* FirebaseAuth */; };
 		F11F858C2BAB307200192421 /* APIFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F858B2BAB307200192421 /* APIFetch.swift */; };
-		F11F858D2BAB307200192421 /* APIFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F858B2BAB307200192421 /* APIFetch.swift */; };
 		F11F858F2BAB342600192421 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F11F858E2BAB342600192421 /* Launch Screen.storyboard */; };
-		F11F85902BAB342600192421 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F11F858E2BAB342600192421 /* Launch Screen.storyboard */; };
+		F11F85982BB5B66900192421 /* FilterSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F85972BB5B66900192421 /* FilterSheet.swift */; };
+		F11F859E2BBB0DB700192421 /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F859D2BBB0DB700192421 /* NavigationBar.swift */; };
+		F11F85A92BD6B47C00192421 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11F85A82BD6B47C00192421 /* File.swift */; };
 		F13E630C2B7A8ED100BB98F4 /* DrakeOrgsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E62FC2B7A8ECC00BB98F4 /* DrakeOrgsApp.swift */; };
-		F13E630D2B7A8ED100BB98F4 /* DrakeOrgsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E62FC2B7A8ECC00BB98F4 /* DrakeOrgsApp.swift */; };
 		F13E630E2B7A8ED100BB98F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E62FD2B7A8ECC00BB98F4 /* ContentView.swift */; };
-		F13E630F2B7A8ED100BB98F4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F13E62FD2B7A8ECC00BB98F4 /* ContentView.swift */; };
 		F13E63102B7A8ED100BB98F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13E62FE2B7A8ED000BB98F4 /* Assets.xcassets */; };
-		F13E63112B7A8ED100BB98F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F13E62FE2B7A8ED000BB98F4 /* Assets.xcassets */; };
 		F1AA340D2B92807200066B7F /* StudentOrgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA340C2B92806E00066B7F /* StudentOrgs.swift */; };
-		F1AA340E2B92807400066B7F /* StudentOrgs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1AA340C2B92806E00066B7F /* StudentOrgs.swift */; };
 		F1B910F32B8596AB0041F1F0 /* SubmitForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B910F22B8596AB0041F1F0 /* SubmitForm.swift */; };
-		F1B910F42B8596AB0041F1F0 /* SubmitForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B910F22B8596AB0041F1F0 /* SubmitForm.swift */; };
 		F1B911022B8696FD0041F1F0 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B911012B8696FB0041F1F0 /* Events.swift */; };
-		F1B911032B8696FD0041F1F0 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B911012B8696FB0041F1F0 /* Events.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,15 +29,15 @@
 		F1097D112B813B9C008F9E1E /* ShapeViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeViews.swift; sourceTree = "<group>"; };
 		F1097D142B823F55008F9E1E /* StudentOrgPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentOrgPage.swift; sourceTree = "<group>"; };
 		F11F857F2BA8E44D00192421 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		F11F85852BA8E58700192421 /* LogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		F11F858B2BAB307200192421 /* APIFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIFetch.swift; sourceTree = "<group>"; };
 		F11F858E2BAB342600192421 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F11F85972BB5B66900192421 /* FilterSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSheet.swift; sourceTree = "<group>"; };
+		F11F859D2BBB0DB700192421 /* NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		F11F85A82BD6B47C00192421 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		F13E62FC2B7A8ECC00BB98F4 /* DrakeOrgsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrakeOrgsApp.swift; sourceTree = "<group>"; };
 		F13E62FD2B7A8ECC00BB98F4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F13E62FE2B7A8ED000BB98F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F13E63032B7A8ED100BB98F4 /* DrakeOrgs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrakeOrgs.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F13E63092B7A8ED100BB98F4 /* DrakeOrgs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrakeOrgs.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F13E630B2B7A8ED100BB98F4 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		F1AA340C2B92806E00066B7F /* StudentOrgs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentOrgs.swift; sourceTree = "<group>"; };
 		F1B910F22B8596AB0041F1F0 /* SubmitForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitForm.swift; sourceTree = "<group>"; };
 		F1B911012B8696FB0041F1F0 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
@@ -57,14 +45,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		F13E63002B7A8ED100BB98F4 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F11F858A2BA8E6C000192421 /* FirebaseAuth in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F13E63062B7A8ED100BB98F4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -78,7 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				F13E62FB2B7A8ECC00BB98F4 /* Shared */,
-				F13E630A2B7A8ED100BB98F4 /* macOS */,
 				F13E63042B7A8ED100BB98F4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,7 +68,8 @@
 				F13E62FC2B7A8ECC00BB98F4 /* DrakeOrgsApp.swift */,
 				F11F858E2BAB342600192421 /* Launch Screen.storyboard */,
 				F13E62FD2B7A8ECC00BB98F4 /* ContentView.swift */,
-				F11F85852BA8E58700192421 /* LogIn.swift */,
+				F11F859D2BBB0DB700192421 /* NavigationBar.swift */,
+				F11F85972BB5B66900192421 /* FilterSheet.swift */,
 				F11F857F2BA8E44D00192421 /* SearchBar.swift */,
 				F1AA340C2B92806E00066B7F /* StudentOrgs.swift */,
 				F1097D0B2B7D2DF0008F9E1E /* ClubsAndEvents.swift */,
@@ -98,6 +78,7 @@
 				F1097D112B813B9C008F9E1E /* ShapeViews.swift */,
 				F11F858B2BAB307200192421 /* APIFetch.swift */,
 				F1B910F22B8596AB0041F1F0 /* SubmitForm.swift */,
+				F11F85A82BD6B47C00192421 /* File.swift */,
 				F1B911012B8696FB0041F1F0 /* Events.swift */,
 			);
 			path = Shared;
@@ -107,17 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				F13E63032B7A8ED100BB98F4 /* DrakeOrgs.app */,
-				F13E63092B7A8ED100BB98F4 /* DrakeOrgs.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		F13E630A2B7A8ED100BB98F4 /* macOS */ = {
-			isa = PBXGroup;
-			children = (
-				F13E630B2B7A8ED100BB98F4 /* macOS.entitlements */,
-			);
-			path = macOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,27 +109,9 @@
 			);
 			name = "DrakeOrgs (iOS)";
 			packageProductDependencies = (
-				F11F85892BA8E6C000192421 /* FirebaseAuth */,
 			);
 			productName = "DrakeOrgs (iOS)";
 			productReference = F13E63032B7A8ED100BB98F4 /* DrakeOrgs.app */;
-			productType = "com.apple.product-type.application";
-		};
-		F13E63082B7A8ED100BB98F4 /* DrakeOrgs (macOS) */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F13E63172B7A8ED100BB98F4 /* Build configuration list for PBXNativeTarget "DrakeOrgs (macOS)" */;
-			buildPhases = (
-				F13E63052B7A8ED100BB98F4 /* Sources */,
-				F13E63062B7A8ED100BB98F4 /* Frameworks */,
-				F13E63072B7A8ED100BB98F4 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "DrakeOrgs (macOS)";
-			productName = "DrakeOrgs (macOS)";
-			productReference = F13E63092B7A8ED100BB98F4 /* DrakeOrgs.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -173,9 +127,6 @@
 					F13E63022B7A8ED100BB98F4 = {
 						CreatedOnToolsVersion = 13.1;
 					};
-					F13E63082B7A8ED100BB98F4 = {
-						CreatedOnToolsVersion = 13.1;
-					};
 				};
 			};
 			buildConfigurationList = F13E62FA2B7A8ECA00BB98F4 /* Build configuration list for PBXProject "DrakeOrgs" */;
@@ -188,14 +139,13 @@
 			);
 			mainGroup = F13E62F62B7A8ECA00BB98F4;
 			packageReferences = (
-				F11F85882BA8E6C000192421 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				F11F85A72BCD72F000192421 /* XCRemoteSwiftPackageReference "aws-sdk-ios" */,
 			);
 			productRefGroup = F13E63042B7A8ED100BB98F4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				F13E63022B7A8ED100BB98F4 /* DrakeOrgs (iOS) */,
-				F13E63082B7A8ED100BB98F4 /* DrakeOrgs (macOS) */,
 			);
 		};
 /* End PBXProject section */
@@ -210,15 +160,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F13E63072B7A8ED100BB98F4 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F11F85902BAB342600192421 /* Launch Screen.storyboard in Resources */,
-				F13E63112B7A8ED100BB98F4 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -230,31 +171,15 @@
 				F1097D152B823F55008F9E1E /* StudentOrgPage.swift in Sources */,
 				F1097D0C2B7D2DF0008F9E1E /* ClubsAndEvents.swift in Sources */,
 				F13E630E2B7A8ED100BB98F4 /* ContentView.swift in Sources */,
+				F11F859E2BBB0DB700192421 /* NavigationBar.swift in Sources */,
 				F1097D122B813B9C008F9E1E /* ShapeViews.swift in Sources */,
 				F1B911022B8696FD0041F1F0 /* Events.swift in Sources */,
-				F11F85862BA8E58700192421 /* LogIn.swift in Sources */,
 				F11F85802BA8E44D00192421 /* SearchBar.swift in Sources */,
 				F13E630C2B7A8ED100BB98F4 /* DrakeOrgsApp.swift in Sources */,
 				F1AA340D2B92807200066B7F /* StudentOrgs.swift in Sources */,
+				F11F85A92BD6B47C00192421 /* File.swift in Sources */,
 				F1B910F32B8596AB0041F1F0 /* SubmitForm.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F13E63052B7A8ED100BB98F4 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F11F858D2BAB307200192421 /* APIFetch.swift in Sources */,
-				F1097D162B823F55008F9E1E /* StudentOrgPage.swift in Sources */,
-				F1097D0D2B7D2DF0008F9E1E /* ClubsAndEvents.swift in Sources */,
-				F13E630F2B7A8ED100BB98F4 /* ContentView.swift in Sources */,
-				F1097D132B813B9C008F9E1E /* ShapeViews.swift in Sources */,
-				F1B911032B8696FD0041F1F0 /* Events.swift in Sources */,
-				F11F85872BA8E58700192421 /* LogIn.swift in Sources */,
-				F11F85812BA8E44D00192421 /* SearchBar.swift in Sources */,
-				F13E630D2B7A8ED100BB98F4 /* DrakeOrgsApp.swift in Sources */,
-				F1AA340E2B92807400066B7F /* StudentOrgs.swift in Sources */,
-				F1B910F42B8596AB0041F1F0 /* SubmitForm.swift in Sources */,
+				F11F85982BB5B66900192421 /* FilterSheet.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,11 +307,13 @@
 				DEVELOPMENT_TEAM = 5S96X3MMN9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DrakeOrgs;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -396,6 +323,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.DrakeOrgs;
 				PRODUCT_NAME = DrakeOrgs;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -412,11 +343,13 @@
 				DEVELOPMENT_TEAM = 5S96X3MMN9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DrakeOrgs;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -426,66 +359,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.DrakeOrgs;
 				PRODUCT_NAME = DrakeOrgs;
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		F13E63182B7A8ED100BB98F4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5S96X3MMN9;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.DrakeOrgs;
-				PRODUCT_NAME = DrakeOrgs;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-			};
-			name = Debug;
-		};
-		F13E63192B7A8ED100BB98F4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 5S96X3MMN9;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.DrakeOrgs;
-				PRODUCT_NAME = DrakeOrgs;
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -510,35 +391,18 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F13E63172B7A8ED100BB98F4 /* Build configuration list for PBXNativeTarget "DrakeOrgs (macOS)" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F13E63182B7A8ED100BB98F4 /* Debug */,
-				F13E63192B7A8ED100BB98F4 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F11F85882BA8E6C000192421 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		F11F85A72BCD72F000192421 /* XCRemoteSwiftPackageReference "aws-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			repositoryURL = "https://github.com/aws-amplify/aws-sdk-ios.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.22.1;
+				kind = upToNextMinorVersion;
+				minimumVersion = 2.35.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		F11F85892BA8E6C000192421 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F11F85882BA8E6C000192421 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F13E62F72B7A8ECA00BB98F4 /* Project object */;
 }

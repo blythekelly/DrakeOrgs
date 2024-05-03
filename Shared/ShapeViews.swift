@@ -7,45 +7,6 @@
 
 import SwiftUI
 
-struct CircleView: View {
-    @State var label: String
-    
-    //creates oval-shaped buttons for interest filters
-    var body: some View {
-        Button(action: {
-        }){
-        ZStack {
-            Ellipse()
-                .fill(Color(UIColor(hex: "#004477")!))
-                .frame(width: 100, height: 80)
-            Text(label).foregroundColor(.white)
-        }
-        }
-    }
-}
-
-//creates rectangle buttons for list of clubs
-struct RectangleView: View {
-    @State var label: String
-    @State private var isButtonPressed: Bool = false
-    
-    var body: some View {
-        Button(action: {
-            self.isButtonPressed = true
-        }){
-        ZStack {
-            Rectangle()
-                .fill(Color(UIColor(hex: "#004477")!))
-                .frame(width: 300.0, height: 80.0)
-            Text(label).foregroundColor(.white)
-        }
-        }
-        //once button is pressed, send label data to club page
-        .sheet(isPresented: $isButtonPressed) {
-            DisplayTextView(orgName: self.label)
-        }
-}
-}
 
 extension UIColor {
     convenience init?(hex: String) {
@@ -67,9 +28,9 @@ extension UIColor {
     }
 }
 
-struct OrganizationButtonView: View {
-    let orgName: String
-    @State private var interest: String = ""
+
+struct OrgButtonView: View {
+    let org: StudentOrg
     @State private var isButtonPressed: Bool = false
     
     var body: some View {
@@ -77,11 +38,11 @@ struct OrganizationButtonView: View {
             self.isButtonPressed = true
         }) {
             VStack {
-                Text(orgName)
+                Text(org.orgName)
                     .font(.system(size: 24, weight: .bold))
                     .font(.headline)
                     .foregroundColor(.black)
-                Text(interests.isEmpty ? "Loading..." :interest)
+                Text(org.interest)
                     .font(.subheadline)
                     .foregroundColor(.white)
                     .padding(.vertical, 5)
@@ -92,39 +53,15 @@ struct OrganizationButtonView: View {
                     )
             }
         }
-        .onAppear {
-                    fetchOrganizationData(orgName: orgName) { result in
-                        switch result {
-                        case .success(let data):
-                            do {
-                                guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
-                                    print("Invalid JSON format")
-                                    return
-                                }
-                                
-                                guard let interest = json["interest"] as? String else {
-                                    print("Missing 'interest' field")
-                                    return
-                                }
-                                DispatchQueue.main.async {
-                                    self.interest = interest // Update the interest property on the main thread
-                                }
-                            } catch {
-                                print("Error parsing JSON:", error)
-                            }
-                        case .failure(let error):
-                            print("Error fetching organization data:", error)
-                        }
-                    }
-                }
         .frame(maxWidth: .infinity)
         .frame(height: 130)
         .background(Color.white)
                 .cornerRadius(10)
                 //once button is pressed, send label data to club page
                 .sheet(isPresented: $isButtonPressed) {
-                    DisplayTextView(orgName: self.orgName)
+                    DisplayTextView(org: org)
                 }
     }
 }
+
 
